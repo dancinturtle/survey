@@ -10,6 +10,15 @@
 
 
   <h2>Current Polls:</h2>
+  <div class="row">
+
+    <div class="col-md-3 col-md-offset-9">
+      <form role="form">
+        <input type="text" placeholder="Search" ng-model="search"/>
+      </form>
+    </div>
+
+  </div>
 
   <table class="table table-striped">
     <thead>
@@ -19,7 +28,7 @@
       <th>Action</th>
     </thead>
     <tbody>
-      <tr ng-repeat="poll in allPolls">
+      <tr ng-repeat="poll in allPolls | filter: search">
         <td ng-bind="poll.name"></td>
         <td>
           <a href="#/takePoll/{{poll._id}}" ng-bind="poll.question"></a>

@@ -1,0 +1,38 @@
+
+<div ng-controller="DashboardController">
+
+  <div class="row">
+    <div class="col-md-3 col-md-offset-9">
+      <a href="#/newPoll">Create a New Poll</a>
+      <a class="logout" href= "#/">Logout</a>
+    </div>
+  </div>
+
+
+  <h2>Current Polls:</h2>
+
+  <table class="table table-striped">
+    <thead>
+      <th>Name</th>
+      <th>Survey Question</th>
+      <th>Date Posted</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="poll in allPolls">
+        <td ng-bind="poll.name"></td>
+        <td>
+          <a href="#/takePoll/{{poll._id}}" ng-bind="poll.question"></a>
+        </td>
+        <td ng-bind="poll.createdAt"></td>
+        <td >
+          <button class="btn btn-danger" ng-show="poll.owned" ng-click="deletepoll(poll._id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>

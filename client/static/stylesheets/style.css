@@ -1,0 +1,9 @@
+.toplinks {
+  display: inline-block;
+}
+.errormsg {
+  color: orange;
+}
+.logout {
+  margin-left: 15px;
+}

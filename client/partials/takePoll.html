@@ -1,0 +1,58 @@
+<div ng-controller="PollTakingController">
+  <div class="row">
+    <div class="col-md-2 col-md-offset-10">
+      <a href="#/dashboard">Go to Polls</a>
+    </div>
+  </div>
+  <h2 ng-bind="currentPoll.question"></h2>
+  <h4>Click the Vote button to choose one.</h4>
+
+
+  <table class="table table-striped">
+    <thead>
+      <th>Option</th>
+      <th>Current Count of Votes</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td ng-bind="currentPoll.option1"></td>
+        <td ng-bind="currentPoll.vote1"></td>
+        <td >
+          <button class="btn btn-success" ng-click="vote(1)">
+            Vote
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td ng-bind="currentPoll.option2"></td>
+        <td ng-bind="currentPoll.vote2"></td>
+        <td >
+          <button class="btn btn-success" ng-click="vote(2)">
+            Vote
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td ng-bind="currentPoll.option3"></td>
+        <td ng-bind="currentPoll.vote3"></td>
+        <td >
+          <button class="btn btn-success" ng-click="vote(3)">
+            Vote
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td ng-bind="currentPoll.option4"></td>
+        <td ng-bind="currentPoll.vote4"></td>
+        <td >
+          <button class="btn btn-success" ng-click="vote(4)">
+            Vote
+          </button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>
